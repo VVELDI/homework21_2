@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Магазин товаров</title>
+
+    <!-- Подключение стилей -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* Основной контент с отступом */
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 220px; /* Отступ равный ширине меню */
+        }
+
+        /* Стили для карточек товаров */
+        .product-card {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .price {
+            color: #28a745;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Адаптивность для мобильных */
+        @media (max-width: 768px) {
+            .content {
+                margin-left: 0;
+                padding-top: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Боковое меню будет вставлено сюда -->
+    <div id="sidebar"></div>
+
+    <div class="content">
+        <div class="tab-pane fade show active" id="home">
+            <div class="d-flex justify-content-center align-items-center mb-5" style="min-height: 200px;">
+                <div class="text-center">
+                    <h1>Главная</h1>
+                    <h6 class="text-muted">Вы находитесь на сайте, предназначенном для продажи товаров.</h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Карточка товара 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center product-card">
+                        <div class="card-header bg-light">
+                            <h5 class="card-title mb-0">Товар 1</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="price">100р.</p>
+                            <p class="card-text">Детское питание</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button type="button" class="btn btn-outline-primary">Купить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка товара 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center product-card">
+                        <div class="card-header bg-light">
+                            <h5 class="card-title mb-0">Товар 2</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="price">100р.</p>
+                            <p class="card-text">Взрослое питание</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button type="button" class="btn btn-outline-primary">Купить</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка товара 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center product-card">
+                        <div class="card-header bg-light">
+                            <h5 class="card-title mb-0">Товар 3</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="price">100р</p>
+                            <p class="card-text">Космическое питание</p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <button type="button" class="btn btn-outline-primary">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаем скрипты -->
+    <script>
+        // Загрузка бокового меню
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar').innerHTML = data;
+                // Инициализация выпадающих меню
+                const dropdowns = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+                dropdowns.map(function (dropdownToggle) {
+                    return new bootstrap.Dropdown(dropdownToggle);
+                });
+            })
+            .catch(error => console.error('Ошибка загрузки меню:', error));
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
