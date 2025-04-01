@@ -1,3 +1,4 @@
+<!-- sidebar.html -->
 <nav class="sidebar">
     <ul class="nav-menu">
         <li class="nav-item">
@@ -20,39 +21,43 @@
                 <i class="fas fa-envelope"></i> Контакты
             </a>
         </li>
-        <li class="nav-item dropdown">
+
+        <!-- Пустое пространство для выталкивания пользователя вниз -->
+        <div style="flex-grow: 1;"></div>
+
+        <!-- Пользователь внизу меню -->
+        <li class="nav-item dropdown mt-auto">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <i class="fas fa-user"></i> Пользователь ▼
             </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Профиль</a></li>
-                <li><a class="dropdown-item" href="#">Выход</a></li>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Профиль</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Выход</a></li>
             </ul>
         </li>
     </ul>
 </nav>
 
-<!-- Подключаем Font Awesome для иконок -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
-<!-- Стили для меню -->
 <style>
     .sidebar {
         width: 220px;
         background-color: #1a1a1a;
         color: #fff;
-        padding: 20px 0;
         height: 100vh;
         position: fixed;
+        display: flex;
+        flex-direction: column;
     }
     .nav-menu {
         list-style: none;
-        padding: 0;
+        padding: 20px 0;
         margin: 0;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
     .nav-item {
         padding: 12px 25px;
-        margin: 3px 0;
         transition: all 0.3s;
     }
     .nav-item:hover {
@@ -75,8 +80,16 @@
     .dropdown-menu {
         background-color: #2a2a2a;
         border: none;
+        margin-left: 10px;
     }
     .dropdown-item {
         color: #fff;
+        padding: 8px 15px;
+    }
+    .dropdown-item:hover {
+        background-color: #333;
+    }
+    .mt-auto {
+        margin-top: auto;
     }
 </style>
