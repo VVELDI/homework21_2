@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8177160d-2d0c-4217-8bcb-dc365e017645" name="Changes" comment="Изменил структуру страниц. Изменил шрифт меню. Добавил движение, при наведении мышкой на карточку с товаром." />
+    <list default="true" id="8177160d-2d0c-4217-8bcb-dc365e017645" name="Changes" comment="Опустил пользователя вниз в меню">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,14 +42,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.app.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/hom21__2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.app.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "#1 on feature/hom21__2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\SkyPro\Projects\project21_2\pythonProject21_2" />
@@ -149,7 +152,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743505930174</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Опустил пользователя вниз в меню">
+      <option name="closed" value="true" />
+      <created>1743506523506</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743506523506</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Опустил пользователя вниз в меню">
+      <option name="closed" value="true" />
+      <created>1743506528426</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743506528426</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +198,7 @@
     <MESSAGE value="Написал структуру проекта, установил css и s макеты" />
     <MESSAGE value="обновил gitignore" />
     <MESSAGE value="Изменил структуру страниц. Изменил шрифт меню. Добавил движение, при наведении мышкой на карточку с товаром." />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменил структуру страниц. Изменил шрифт меню. Добавил движение, при наведении мышкой на карточку с товаром." />
+    <MESSAGE value="Опустил пользователя вниз в меню" />
+    <option name="LAST_COMMIT_MESSAGE" value="Опустил пользователя вниз в меню" />
   </component>
 </project>
