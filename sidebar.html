@@ -1,0 +1,95 @@
+<!-- sidebar.html -->
+<nav class="sidebar">
+    <ul class="nav-menu">
+        <li class="nav-item">
+            <a href="home.html" class="nav-link">
+                <i class="fas fa-home"></i> Главная
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="category.html" class="nav-link">
+                <i class="fas fa-list"></i> Категория
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="catalog.html" class="nav-link">
+                <i class="fas fa-book"></i> Каталог
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="contacts.html" class="nav-link">
+                <i class="fas fa-envelope"></i> Контакты
+            </a>
+        </li>
+
+        <!-- Пустое пространство для выталкивания пользователя вниз -->
+        <div style="flex-grow: 1;"></div>
+
+        <!-- Пользователь внизу меню -->
+        <li class="nav-item dropdown mt-auto">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <i class="fas fa-user"></i> Пользователь ▼
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-user-circle me-2"></i>Профиль</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Выход</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<style>
+    .sidebar {
+        width: 220px;
+        background-color: #1a1a1a;
+        color: #fff;
+        height: 100vh;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-menu {
+        list-style: none;
+        padding: 20px 0;
+        margin: 0;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-item {
+        padding: 12px 25px;
+        transition: all 0.3s;
+    }
+    .nav-item:hover {
+        background-color: #333;
+    }
+    .nav-link {
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+    .nav-link i {
+        width: 24px;
+        margin-right: 12px;
+        font-size: 16px;
+        color: #4dabf7;
+    }
+    .dropdown-menu {
+        background-color: #2a2a2a;
+        border: none;
+        margin-left: 10px;
+    }
+    .dropdown-item {
+        color: #fff;
+        padding: 8px 15px;
+    }
+    .dropdown-item:hover {
+        background-color: #333;
+    }
+    .mt-auto {
+        margin-top: auto;
+    }
+</style>

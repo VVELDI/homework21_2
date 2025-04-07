@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Шрифт Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap и Font Awesome -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин товаров</title>
+    <!-- Подключаем Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключаем Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+        }
+        .nav-sidebar {
+            width: 200px;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .nav-sidebar .nav-link {
+            color: white;
+        }
+        .nav-sidebar .nav-link:hover {
+            background-color: #444;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        /* Добавляем стили для dropdown */
+        .dropdown-menu {
+            position: absolute;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<div id="sidebar"></div>
+<div class="content" id="content"></div>
+
+<!-- Подключаем Bootstrap JS Bundle (должен быть перед вашими скриптами) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Загрузка бокового меню
+    fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('sidebar').innerHTML = data;
+            setupNavigation();
+        });
+
+    // Функция для загрузки страницы
+    function loadPage(page) {
+        // Обновляем URL в адресной строке
+        window.history.pushState(null, null, page);
+
+        fetch(page)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('content').innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Ошибка:", error);
+                document.getElementById('content').innerHTML = `
+                    <div class="alert alert-danger">
+                        Страница не найдена: ${page}
+                    </div>
+                `;
+            });
+    }
+
+    // Настройка обработчиков кликов
+    function setupNavigation() {
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const page = this.getAttribute('href');
+                loadPage(page);
+            });
+        });
+    }
+
+    // Обработка навигации по истории
+    window.onpopstate = function() {
+        const path = window.location.pathname.substring(1) || 'home.html';
+        loadPage(path);
+    };
+
+    // Загружаем страницу по умолчанию
+    const initialPage = window.location.pathname.substring(1) || 'home.html';
+    loadPage(initialPage);
+</script>
+</body>
+</html>

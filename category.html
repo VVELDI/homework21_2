@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Шрифт Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap и Font Awesome -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Категории питания</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .category-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .category-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #343a40;
+            font-weight: 600;
+            text-align: center;
+        }
+        .product-row {
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .card-header {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            color: #495057;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .price {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #28a745;
+            margin: 10px 0;
+        }
+        .card-text {
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        .btn-outline-primary {
+            width: 100%;
+        }
+        .nutrition-icon {
+            font-size: 2rem;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="category-container">
+    <h1 class="category-title">Категории питания</h1>
+
+    <!-- Первый ряд из 3 товаров -->
+    <div class="row product-row">
+        <!-- Товар 1 - Детское питание -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="card-header">
+                    <h5 class="card-title">Детское питание</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="nutrition-icon">🍼</div>
+                    <p class="price">450р.</p>
+                    <p class="card-text">Набор органического питания для детей от 6 месяцев. Гипоаллергенно, без ГМО и
+                        консервантов.</p>
+                    <button type="button" class="btn btn-outline-primary">В корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Товар 2 - Взрослое питание -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="card-header">
+                    <h5 class="card-title">Взрослое питание</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="nutrition-icon">🍎</div>
+                    <p class="price">690р.</p>
+                    <p class="card-text">Сбалансированный рацион на неделю для поддержания здоровья и энергии взрослого
+                        человека.</p>
+                    <button type="button" class="btn btn-outline-primary">В корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Товар 3 - Космическое питание -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="card-header">
+                    <h5 class="card-title">Космическое питание</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="nutrition-icon">🚀</div>
+                    <p class="price">1,290р.</p>
+                    <p class="card-text">Специальное питание для экстремальных условий. Используется космонавтами и
+                        полярниками.</p>
+                    <button type="button" class="btn btn-outline-primary">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Второй ряд из 3 товаров -->
+    <div class="row product-row">
+        <!-- Товар 4 - Спортивное питание -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="card-header">
+                    <h5 class="card-title">Спортивное питание</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="nutrition-icon">💪</div>
+                    <p class="price">850р.</p>
+                    <p class="card-text">Протеиновые коктейли и энергетические батончики для профессиональных
+                        спортсменов.</p>
+                    <button type="button" class="btn btn-outline-primary">В корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Товар 5 - Диетическое питание -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="card-header">
+                    <h5 class="card-title">Диетическое питание</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="nutrition-icon">🥗</div>
+                    <p class="price">720р.</p>
+                    <p class="card-text">Низкокалорийные блюда для контроля веса. Без сахара, с пониженным содержанием
+                        жиров.</p>
+                    <button type="button" class="btn btn-outline-primary">В корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Товар 6 - Веганское питание -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="card-header">
+                    <h5 class="card-title">Веганское питание</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="nutrition-icon">🌱</div>
+                    <p class="price">670р.</p>
+                    <p class="card-text">Полностью растительное питание без продуктов животного происхождения. Богато
+                        белком.</p>
+                    <button type="button" class="btn btn-outline-primary">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
